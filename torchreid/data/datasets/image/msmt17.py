@@ -12,8 +12,8 @@ TRAIN_DIR_KEY = 'train_dir'
 TEST_DIR_KEY = 'test_dir'
 VERSION_DICT = {
     'MSMT17_V1': {
-        TRAIN_DIR_KEY: 'train',
-        TEST_DIR_KEY: 'test',
+        TRAIN_DIR_KEY: 'bounding_box_train',
+        TEST_DIR_KEY: 'bounding_box_test',
     },
     'MSMT17_V2': {
         TRAIN_DIR_KEY: 'mask_train_v2',
@@ -29,13 +29,13 @@ class MSMT17(ImageDataset):
         Wei et al. Person Transfer GAN to Bridge Domain Gap for Person Re-Identification. CVPR 2018.
 
     URL: `<http://www.pkuvmc.com/publications/msmt17.html>`_
-    
+
     Dataset statistics:
         - identities: 4101.
         - images: 32621 (train) + 11659 (query) + 82161 (gallery).
         - cameras: 15.
     """
-    dataset_dir = 'msmt17'
+    dataset_dir = 'MSMT17'
     dataset_url = None
 
     def __init__(self, root='', **kwargs):

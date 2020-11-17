@@ -138,3 +138,7 @@ log/
 saved-models/
 model-zoo/
 debug*
+
+# compressed
+*.tar
+*.zip
